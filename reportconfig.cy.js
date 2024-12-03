@@ -1,3 +1,10 @@
+//import 'cypress-mochawesome-reporter/register';
+//need to be added to e2e file under Support folder
+
+
+
+
+
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
