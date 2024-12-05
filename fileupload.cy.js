@@ -1,7 +1,7 @@
-// have to install the cypress file upload plugin using command "npm install --save-dev cypress-file-upload" 
+e// have to install the cypress file upload plugin using command "npm install --save-dev cypress-file-upload" 
 // Add an import commands.js "import 'cypress-file-upload';""
 
-//Uploading a file in the web (Any file type you may upload. first you have to add it in fixtures folder)
+//Uploading a file in the web (Before uploading any file, add it to the fixtures folder)
 
 
 /// <reference types="cypress-downloadfile"/>
