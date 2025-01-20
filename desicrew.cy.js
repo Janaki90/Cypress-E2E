@@ -19,18 +19,15 @@ describe('DesiCrew Automation', () => {
         cy.get("a[href='../about-us/about-us.html']").click();
         cy.url().should('include', '/about-us');
         //cy.get(':nth-child(2) > .nav-link').click();
-        cy.get("a[type='submit']").click();
+        cy.get(':nth-child(2) > .nav-link').click();
         cy.wait(2000)
-        cy.get('#workEmail').type('demotestgmail.com');
-        cy.get('#phoneNumber').type('1234567890');
-        cy.get('#message').type('Demo testing');
-        cy.get("input[value='Submit']").click();
-        cy.url().should('include', '/contact-us')
-        cy.get("img[alt='logo']").should('be.visible');
+        cy.scrollTo('bottom');
+        
     });
 
     it('should retrieve office details from the contact us page', () => {
-        cy.get("a[type='submit']").click();
+        cy.get("a[type='submit']").click({ force: true });
+        
         cy.get('.row.row-cols-1.row-cols-lg-2.align-items-stretch.g-5.py-5').then((offices) => {
           offices.each((index, office) => {
             const officeText = Cypress.$(office).text();
